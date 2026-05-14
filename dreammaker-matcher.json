@@ -1,0 +1,17 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "dream-annotate",
+      "pattern": [
+        {
+          "regexp": "(.*?), line (\\d+), column (\\d+):\\s{1,2}(error|warning): (.*)",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      ]
+    }
+  ]
+}

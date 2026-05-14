@@ -1,7 +1,7 @@
 # DreamAnnotate
-Github action to annotate the output of DreamCheck
+Github action to annotate the output of [DreamChecker](https://github.com/SpaceManiac/SpacemanDMM/tree/master/crates/dreamchecker) and DreamMaker.
 
-# Usage
+## Usage
 ```yaml
 name: CI
 
@@ -20,3 +20,8 @@ jobs:
 
     # ...
 ```
+
+## Inputs
+
+- `dreamchecker`: Enables the DreamChecker output parser. Default: true
+- `dreammaker`: Enables the DreamMaker output parser. Default: true

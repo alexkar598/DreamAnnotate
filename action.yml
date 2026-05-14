@@ -1,11 +1,24 @@
 name: DreamAnnotate
 author: alexkar598
 description: Parse and annotate the output of dreamcheck
+inputs:
+  dreamchecker:
+    description: 'Enables the DreamChecker output parser. Default: true'
+    required: false
+    default: 'true'
+  dreammaker:
+    description: 'Enables the DreamMaker output parser. Default: true'
+    required: false
+    default: 'true'
 runs:
   using: "composite"
   steps:
-    - run: "echo ::add-matcher::${{ github.action_path }}/matcher.json"
+    - run: "echo ::add-matcher::${{ github.action_path }}/dreamchecker-matcher.json"
       shell: bash
+      if: ${{ inputs.dreamchecker == 'true' }}
+    - run: "echo ::add-matcher::${{ github.action_path }}/dreammaker-matcher.json"
+      shell: bash
+      if: ${{ inputs.dreammaker== 'true' }}
 branding:
   icon: file-text
   color: orange
