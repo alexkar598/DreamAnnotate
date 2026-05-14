@@ -1,14 +1,15 @@
 {
   "problemMatcher": [
     {
-      "owner": "dream-annotate",
+      "owner": "dreamannotate-dreamchecker",
       "pattern": [
         {
-          "regexp": "^(.*):(\\d+):(warning|error): (.*)$",
+          "regexp": "(.*?), line (\\d+), column (\\d+):\\s{1,2}(error|warning): (.*)",
           "file": 1,
           "line": 2,
-          "severity": 3,
-          "message": 4
+          "column": 3,
+          "severity": 4,
+          "message": 5
         }
       ]
     }
