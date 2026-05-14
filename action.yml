@@ -1,13 +1,11 @@
 name: DreamAnnotate
 author: alexkar598
 description: Parse and annotate the output of dreamcheck
-inputs:
-  outputFile:
-    description: Output of DreamCheck
-    required: true
 runs:
-  using: node16
-  main: dist/index.js
+  using: "composite"
+  steps:
+    - run: "echo ::add-matcher::${{ github.action_path }}/matcher.json"
+      shell: bash
 branding:
   icon: file-text
   color: orange
