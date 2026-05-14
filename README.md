@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: DreamAnnotate
-        uses: alexkar598/DreamAnnotate@v3-rc3
+        uses: alexkar598/DreamAnnotate@v3
         
       - uses: actions/checkout@v4
 
