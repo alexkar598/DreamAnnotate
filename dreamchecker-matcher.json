@@ -4,12 +4,15 @@
       "owner": "dreamannotate-dreamchecker",
       "pattern": [
         {
-          "regexp": "(.*?), line (\\d+), column (\\d+):\\s{1,2}(error|warning): (.*)",
+          "regexp": "(.*?), line (\\d+), column (\\d+):",
           "file": 1,
           "line": 2,
-          "column": 3,
-          "severity": 4,
-          "message": 5
+          "column": 3
+        },
+        {
+          "regexp": "(error|warning): (.*)",
+          "severity": 1,
+          "message": 2
         }
       ]
     }
